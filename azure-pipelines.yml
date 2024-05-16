@@ -36,7 +36,7 @@ steps:
     patchVersion: '0'
 
 - script: 'apt install mono-complete'
-    displayName: 'Install Mono (required to run following NuGet command)'
+  displayName: 'Install Mono (required to run following NuGet command)'
  
 - task: NuGetCommand@2
   displayName: 'Publish NuGet package'
