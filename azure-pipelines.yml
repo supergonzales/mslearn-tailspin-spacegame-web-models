@@ -1,5 +1,5 @@
 pool:
-  namne: 'Default'
+  name: 'Default'
 
 variables:
   buildConfiguration: 'Release'
