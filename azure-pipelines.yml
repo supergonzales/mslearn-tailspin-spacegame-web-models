@@ -35,9 +35,12 @@ steps:
     minorVersion: '0'
     patchVersion: '0'
 
+# The original pipeline is designed to run on Azure DevOps' Ubutun images which includes mono
+# We have to manually install it here as we run the pipeline in a self-hosted Github Codespaces
 - script: | 
     sudo apt update
     sudo apt install -y mono-complete
+  displayName: 'Install Mono required by NuGetCommand@2'
  
 - task: NuGetCommand@2
   displayName: 'Publish NuGet package'
